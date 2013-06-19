@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jquery.candleshadow</title>
+		<style type="text/css">
+			#container {
+				margin-left: 200px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<h2>Large Heading</h2>
+			<p>Content</p>
+			<p>Content</p>
+			<p>An interesting point!</p>
+			<img src="http://octodex.github.com/images/original.jpg" id="octocat">
+		</div>
+		<script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
+		<script src="./jquery.candleshadow.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('h2').candleshadow({ variance: 10 });
+				$('p').candleshadow({ css: { color: 'red' } });
+				$('#octocat').candleshadow({ css: { opacity: 0.3 }, variance: 50, step: 3, 'z-index': 100 });
+			});
+		</script>
+	</body>
+</html>
